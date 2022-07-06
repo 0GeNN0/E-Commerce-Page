@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Go To Solution Page On Front-End Mentor]()
-- Live Site URL: [Live Site On Github]()
+- Solution URL: [Go To Solution Page On Front-End Mentor](https://www.frontendmentor.io/solutions/ecommerce-page-with-css-grid-and-flexbox-fMEERv-MWf)
+- Live Site URL: [Live Site On Github](https://0genn0.github.io/E-Commerce-Page/)
 
 ## My process
 
