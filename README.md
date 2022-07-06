@@ -1,5 +1,7 @@
 # Frontend Mentor - E-commerce product page
 
+## Note!! The Application isn't working as expected on Mobile Screen on FireFox browser for unknown reason to me. 
+
 ## Table of contents
 
 - [Overview](#overview)
