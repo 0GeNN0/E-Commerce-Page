@@ -93,6 +93,7 @@ const createImg = (i) => {
   index = i - 1;
   imgEl.className = 'on-stage';
   imgEl.setAttribute('src', `./images/image-product-${i}.jpg`);
+  imgEl.setAttribute('alt', 'on-stage');
   // display the modal when click on the big image
   imgEl.addEventListener('click', () => {
     modal.classList.add('display-mode');

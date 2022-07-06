@@ -171,6 +171,11 @@ small.shown {
   user-select: none;
 }
 
+.attribution {
+  text-align: center;
+  margin-block: 3rem;
+}
+
 @media (max-width: 770px) {
   header {
     padding-inline: 2rem;
@@ -181,5 +186,8 @@ small.shown {
   }
   small {
     top: 25%;
+  }
+  .attribution {
+    margin-top: 0;
   }
 }
