@@ -1,0 +1,72 @@
+section.mobile {
+  display: none;
+}
+
+// work from 850px width
+@media (max-width: 850px) {
+  header {
+    padding-inline: 3rem;
+  }
+  section.desktop {
+    display: none;
+  }
+  section.mobile {
+    display: flex;
+    align-items: center;
+  }
+  .mobile .menu-icon {
+    margin-right: 2rem;
+  }
+  // style the div that get displayed when menu icon clicked
+  .toggle {
+    height: 100vh;
+    width: 300px;
+    position: absolute;
+    left: -400px;
+    top: 0;
+    background-color: white;
+    box-shadow: 5px 0 20px 0 rgba(#000000, $alpha: .5);
+    transition: .5s ease-in-out;
+    z-index: 1000000;
+  }
+  .toggle.render {
+    left: 0;
+  }
+  // Setting the close icon 
+  .toggle .close {
+    padding: 3rem;
+    cursor: pointer;
+  }
+  .toggle menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+    font-weight: 700;
+  }
+  .toggle menu li {
+    margin-bottom: 1.5rem;
+    transition: padding .3s ease-in-out;
+  }
+  .toggle menu li:hover {
+    padding-left: 1rem;
+  }
+  // This is the cart div that appears when hovering the cart icon 
+  #cart {
+    width: 35rem;
+    right: -1.6rem;
+    top: 110%;
+  }
+  .header .profile {
+    height: 70px;
+  }
+  .avatar {
+    height: 45px;
+  }
+}
+
+@media (max-width: 770px) {
+  header {
+    position: fixed;
+    z-index: 1000;
+  }
+}

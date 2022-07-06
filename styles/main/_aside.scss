@@ -1,0 +1,152 @@
+@import '../base/base';
+
+aside {
+  padding-block: 5rem;
+}
+
+.subtitle {
+  color: $orange;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.aside-title {
+  color: $very-dark-blue;
+  font-size: 4rem;
+  margin: 2rem 0 4rem;
+}
+
+.details {
+  color: $dark-grayish-blue;
+  line-height: 1.6;
+}
+
+.price {
+  margin-block: 2.5rem;
+}
+
+.offer {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.offer p {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-right: $small-size;
+  color: $very-dark-blue;
+}
+
+.offer span {
+  padding: .3rem 1rem;
+  background-color: #e7e9ef;
+  color: $orange;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.discount {
+  font-weight: 700;
+  color: $grayish-blue;
+}
+
+.buying-actions {
+  display: flex;
+  align-items: center;
+}
+
+.amount {
+  background-color: $light-grayish-blue;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  user-select: none;
+}
+
+.amount .svg,
+.amount span {
+  padding: 2rem;
+}
+
+.amount .svg {
+  cursor: pointer;
+}
+
+.amount path:hover {
+  fill: rgba($orange, $alpha: .5);
+}
+
+.amount span {
+  font-weight: 700;
+}
+
+.buy {
+  border: none;
+  background-color: $orange;
+  color: white;
+  padding: 1.8rem 9rem;
+  border-radius: 1rem;
+  font-size: $small-size;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30rem;
+  box-shadow: 0 10px 20px 0 rgba($orange, $alpha: .5);
+  cursor: pointer;
+  user-select: none;
+}
+
+.buy:hover {
+  background-color: rgba($orange, $alpha: .8);
+}
+
+.buy:active {
+  box-shadow: 0 3px 10px 0 rgba($orange, $alpha: .2);
+}
+
+.buy svg {
+  margin-right: 1rem;
+}
+
+.buy svg path {
+  fill: white;
+}
+
+@media (max-width: 770px) {
+  aside {
+    padding: 0 2rem;
+  }
+  .aside-title {
+    font-size: 3rem;
+  }
+  .price {
+    display: flex;
+    align-items: center;
+  }
+  .offer {
+    margin-bottom: 0;
+  }
+  .discount {
+    margin-left: auto;
+  }
+  .buying-actions {
+    flex-direction: column;
+  }
+  .amount {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .btn {
+    width: 100%;
+  }
+  .btn .buy {
+    width: inherit;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+}

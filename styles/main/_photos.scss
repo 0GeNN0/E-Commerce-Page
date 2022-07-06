@@ -1,0 +1,272 @@
+.main {
+  padding-inline: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 9rem;
+}
+
+.render-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.render-image .on-stage {
+  border-radius: 1.5rem;
+  object-fit: cover;
+  width: 100%;
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.on-stage:hover {
+  transform: scale(1.1);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.img {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.img .product-img {
+  width: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+
+.img::after {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background-color: rgba(#fff, $alpha: .5);
+  top: 0;
+  left: 0;
+  z-index: 5;
+  border: 3px solid $orange;
+  border-radius: 1rem;
+  pointer-events: none;
+  display: none;
+}
+
+.img.active::after,
+.img.active:hover::after {
+  display: block;
+  border: 3px solid $orange;
+  width: 95%;
+  height: 95%;
+}
+
+.img:hover::after {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.images-parent {
+  position: relative;
+}
+
+.image-slider {
+  display: none;
+}
+
+.btns {
+  display: none;
+}
+
+// Modal section
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(#000000, $alpha: .8);
+  z-index: 473829423942347;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: .2s ease-in-out;
+}
+
+.modal.display-mode {
+  transform: scale(1);
+}
+
+.modal .svg-modal {
+  width: 40rem;
+}
+
+.modal .svg-modal svg {
+  margin: 0 0 2rem auto;
+  display: inherit;
+  cursor: pointer;
+}
+
+.modal .svg-modal svg:hover path {
+  fill: $orange;
+}
+
+.modal--pop-up {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+// .pop-up {
+//   display: none;
+// }
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.pop-up-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrows {
+  width: 45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-110%);
+}
+
+.arrows button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrows button:hover svg {
+  filter: invert(65%) sepia(90%) saturate(1327%) hue-rotate(355deg) brightness(96%) contrast(112%);
+}
+
+.modal-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40rem;
+}
+
+.modal-list-img {
+  border-radius: 1rem;
+  margin-top: 2rem;
+  flex-basis: 20%;
+  height: 8rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.modal-list-img.active::after,
+.modal-list-img:hover::after {
+  content: '';
+  width: 95%;
+  height: 95%;
+  background-color: rgba(white, $alpha: 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid $orange;
+  border-radius: 1rem;
+}
+
+.modal-list-img:hover::after {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-list-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+@keyframes fade {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    padding-inline: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .main {
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .render-image,
+  .main .list {
+    display: none;
+  }
+  .images-parent {
+    width: 100%;
+    overflow: hidden;
+  }
+  .image-slider {
+    display: flex;
+  }
+  .image-slider img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .btns {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -400%);
+  }
+  .btns button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}

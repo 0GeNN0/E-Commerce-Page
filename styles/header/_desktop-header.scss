@@ -1,0 +1,35 @@
+@import '../base/base';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $light-grayish-blue;
+}
+
+section.desktop {
+  display: flex;
+  align-items: center;
+}
+
+.desktop menu li {
+  padding-block: 4rem;
+  margin-left: 3rem;
+  color: $dark-grayish-blue;
+}
+
+.desktop menu li:hover {
+  border-bottom: 3px solid $orange;
+  color: $very-dark-blue;
+}
+
+.avatar {
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+
+.avatar:hover {
+  border: 3px solid $orange;
+}
+
